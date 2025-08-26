@@ -1,3 +1,4 @@
 prometheus_client
 playwright
 openpyxl
+python-logging-loki

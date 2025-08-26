@@ -32,32 +32,21 @@ services:
     networks:
       - observability-net
 
-  promtail:
-    image: grafana/promtail:latest
-    container_name: promtail
-    volumes:
-      - ./promtail/config.yml:/etc/promtail/config.yml
-      - app-logs:/var/log/app_logs
-    command: ["-config.file=/etc/promtail/config.yml"]
-    networks:
-      - observability-net
-    depends_on:
-      - loki
-
   app:
     build: ./app
     volumes:
       - ./app/contatos.xlsx:/app/contatos.xlsx
-      - app-logs:/var/log/app_logs
     ports:
       - "8000:8000"
     networks:
       - observability-net
+    depends_on:
+      - loki
+      - prometheus
 
 networks:
   observability-net:
     driver: bridge
 
 volumes:
-  app-logs:
   loki-data:
