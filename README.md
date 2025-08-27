@@ -1,6 +1,6 @@
-#  Observability Python + Prometheus + Grafana
+#  Observability Stack
 
-Este repositório demonstra um exemplo de observabilidade usando Python e uma stack de ferramentas de observabilidade comumente utilizada por SRE/Devops via Docker Compose.
+Este repositório exemplifica como eu faria a observabilidade usando Python e uma stack de ferramentas de observabilidade comumente utilizadas por SRE/Devops via Docker Compose a fim de demonstrar meu conhecimento.
 
 ##  Como rodar
 
@@ -11,9 +11,10 @@ Este repositório demonstra um exemplo de observabilidade usando Python e uma st
    ```
 
 3. Acesse os serviços:
-   - Python App (métricas): [http://localhost:8000/metrics](http://localhost:8000/metrics)
-   - Prometheus: [http://localhost:9090](http://localhost:9090)
-   - Grafana: [http://localhost:3000](http://localhost:3000)
+   - Python App (métricas): (http://localhost:8000/metrics)
+   - Prometheus: (http://localhost:9090)
+   - Grafana: (http://localhost:3000)
+   - Loki: (http://localhost:3100)
 
    > Usuário padrão Grafana: `admin`  
    > Senha padrão Grafana: `admin`

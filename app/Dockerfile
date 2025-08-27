@@ -39,11 +39,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Instala o navegador Chromium do Playwright junto com dependências
 RUN playwright install --with-deps chromium
 
-# Copia todo o código da aplicação
 COPY . .
 
-# Expõe a porta que a aplicação vai usar
 EXPOSE 8000
 
-# Comando para rodar a aplicação quando o contêiner iniciar
 CMD ["python", "main.py"]
